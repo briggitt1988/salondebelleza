@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="SHINORA: cuidado capilar, estilismo y belleza pensados para que te sientas como tú, en tu mejor versión.">
+  <title>SHINORA | Belleza a tu manera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="weather-config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement"><span>Un espacio para volver a ti</span><span class="announcement-mark" aria-hidden="true">✳</span><span>Belleza con intención</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="SHINORA, inicio">
+      <span class="brand-symbol" aria-hidden="true">S</span>
+      <span class="brand-name">SHINORA</span>
+    </a>
+    <div class="weather-widget" id="weather-widget" hidden aria-live="polite" aria-label="Clima actual">
+      <img class="weather-icon" id="weather-icon" alt="" width="32" height="32">
+      <span id="weather-temperature"></span>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#espacio">El espacio</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="nav-cta" href="#reservar">Reserva tu cita <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Belleza, a tu manera</p>
+        <h1>Tu esencia.<br><em>En primer plano.</em></h1>
+        <p class="hero-intro">Un momento para ti, un look que se siente tuyo. En SHINORA cuidamos cada detalle para que salgas brillando por dentro y por fuera.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#servicios">Descubre los servicios <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#espacio">Conoce SHINORA <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-star" aria-hidden="true">✳</span><span>Tu belleza no sigue reglas.<br>Tu estilo tampoco.</span></div>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="imagenes/hero.png" alt="Interior luminoso del salón con sillones de estilismo y espejos" fetchpriority="high">
+        <div class="image-stamp"><span>SHINORA</span><span>Un espacio para ti</span></div>
+        <span class="hero-caption">UN RESPIRO · UN NUEVO COMIENZO</span>
+      </div>
+      <div class="hero-index" aria-hidden="true">S / 01</div>
+    </section>
+
+    <section class="intro-strip" aria-label="Nuestra filosofía">
+      <p>Tu pelo cuenta historias. <span>Que la próxima</span> sea la que tú elijas.</p>
+      <span class="intro-spark" aria-hidden="true">✳</span>
+    </section>
+
+    <section class="services section-wrap" id="servicios">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> Elige tu momento</p><h2>Un cuidado que<br><em>habla de ti.</em></h2></div>
+        <p class="section-aside">Técnica, creatividad y un ratito solo para ti.<br>Empezamos por lo que te hace sentir bien.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <a class="service-image" href="#galeria" aria-label="Ver estilos modernos en la galería"><img src="imagenes/estilos%20modernos.avif" alt="Estilista creando un corte moderno en el salón" loading="lazy"><span class="service-number">A</span></a>
+          <div class="service-info"><div><h3>Color &amp; corte</h3><p>Un estilo renovado, fiel a ti.</p></div><a href="#galeria" class="round-arrow" aria-label="Ver galería de estilos">↗</a></div>
+        </article>
+        <article class="service-card reveal">
+          <a class="service-image" href="#galeria" aria-label="Ver cuidado capilar en la galería"><img src="imagenes/lavado%20de%20cabello.avif" alt="Tratamiento capilar profesional en el salón" loading="lazy"><span class="service-number">B</span></a>
+          <div class="service-info"><div><h3>Rituales capilares</h3><p>Un respiro para tu cabello.</p></div><a href="#galeria" class="round-arrow" aria-label="Ver cuidado capilar">↗</a></div>
+        </article>
+        <article class="service-card reveal">
+          <a class="service-image" href="#galeria" aria-label="Ver maquillaje en la galería"><img src="imagenes/maquillaje%20profesional%20para%20cada%20evento%20especial.avif" alt="Maquillaje profesional para una ocasión especial" loading="lazy"><span class="service-number">C</span></a>
+          <div class="service-info"><div><h3>Maquillaje</h3><p>Para tus días inolvidables.</p></div><a href="#galeria" class="round-arrow" aria-label="Ver maquillaje">↗</a></div>
+        </article>
+      </div>
+      <a class="services-link" href="#galeria">Mira lo que podemos crear <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="booking-section" id="reservar" aria-labelledby="booking-title">
+      <div class="booking-inner section-wrap">
+        <div class="booking-copy reveal">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> Tu momento empieza aquí</p>
+          <h2 id="booking-title">Hagamos espacio<br><em>para ti.</em></h2>
+          <p>Cuéntanos qué servicio te interesa y cuándo te gustaría venir. Te ayudaremos a coordinar tu cita por WhatsApp.</p>
+          <a class="booking-whatsapp" href="https://wa.me/584240000000" target="_blank" rel="noopener noreferrer">WhatsApp <span>+58 424 000 0000</span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <form class="booking-form reveal" id="booking-form" aria-describedby="booking-note">
+          <div class="booking-fields">
+            <div class="booking-field">
+              <label for="booking-name">Tu nombre</label>
+              <input id="booking-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-service">Servicio</label>
+              <select id="booking-service" name="service" required>
+                <option value="" selected disabled>Elige un servicio</option>
+                <option>Color y corte</option>
+                <option>Ritual capilar</option>
+                <option>Maquillaje</option>
+                <option>Peinado para ocasión especial</option>
+                <option>Manicure y pedicure</option>
+                <option>Otro servicio</option>
+              </select>
+            </div>
+            <div class="booking-field">
+              <label for="booking-date">Fecha preferida</label>
+              <input id="booking-date" name="date" type="date" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-time">Hora preferida</label>
+              <input id="booking-time" name="time" type="time" required>
+            </div>
+          </div>
+          <div class="booking-field booking-message-field">
+            <label for="booking-message">Cuéntanos algún detalle <span>(opcional)</span></label>
+            <textarea id="booking-message" name="message" rows="3" maxlength="300" placeholder="Por ejemplo, el estilo que tienes en mente"></textarea>
+          </div>
+          <p class="booking-note" id="booking-note">Se abrirá WhatsApp con tu solicitud lista. La cita se coordina cuando envíes el mensaje y SHINORA confirme la disponibilidad.</p>
+          <button class="button button-lime booking-submit" type="submit">Continuar a WhatsApp <span aria-hidden="true">↗</span></button>
+          <p class="booking-status" id="booking-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="space-section" id="espacio">
+      <div class="space-photo reveal"><img src="imagenes/hero.png" alt="Un vistazo al ambiente amplio y luminoso del salón" loading="lazy"></div>
+      <div class="space-copy reveal"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> Tu tiempo, tu espacio</p><h2>Entra.<br><em>Suelta el día.</em></h2><p>Queremos que cada visita se sienta como una pausa. Un lugar tranquilo para conversar, cambiar de aire y salir con ganas de mirarte otra vez.</p><a class="button button-lime" href="#galeria">Pasea por el salón <span aria-hidden="true">↗</span></a><span class="space-spark" aria-hidden="true">✳</span></div>
+    </section>
+
+    <section class="gallery section-wrap" id="galeria">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> Inspiración SHINORA</p><h2>Detalles que<br><em>hacen la diferencia.</em></h2></div><p class="section-aside">Texturas, manos expertas y pequeños rituales.<br>Así se ve sentirse bien.</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-tall reveal"><img src="imagenes/peinados%20para%20toda%20ocasion.webp" alt="Estilista creando un peinado especial" loading="lazy"><figcaption>El arte del peinado <span>↗</span></figcaption></figure>
+        <figure class="gallery-item gallery-wide reveal"><img src="imagenes/cortes%20de%20cabellos.jpg" alt="Un corte pensado para resaltar tu estilo" loading="lazy"><figcaption>Un nuevo aire <span>↗</span></figcaption></figure>
+        <figure class="gallery-item reveal"><img src="imagenes/MANICURE%20Y%20PEDICURE.jpg" alt="Servicio de cuidado de manos y pies en el salón" loading="lazy"><figcaption>Tiempo para ti <span>↗</span></figcaption></figure>
+        <figure class="gallery-item reveal"><img src="imagenes/tratamientos%20de%20cabello%20utltima%20tecnologia.jpg" alt="Cuidado capilar con herramientas profesionales" loading="lazy"><figcaption>Cuidado en cada paso <span>↗</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="faq-section" id="preguntas">
+      <div class="faq-inner section-wrap">
+        <div class="faq-heading reveal"><p class="eyebrow"><span class="eyebrow-line"></span> Antes de venir</p><h2>¿Lo quieres<br><em>saber todo?</em></h2><p>Un par de respuestas para que llegues con más tranquilidad.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>¿Necesito reservar antes de ir?<span class="faq-plus" aria-hidden="true"></span></summary><p>Te recomendamos coordinar tu visita con antelación para que podamos dedicarte el tiempo que mereces.</p></details>
+          <details><summary>¿Puedo llevar una idea o una foto?<span class="faq-plus" aria-hidden="true"></span></summary><p>¡Claro! Una referencia nos ayuda a entender lo que tienes en mente y adaptar el resultado a tu estilo.</p></details>
+          <details><summary>¿Cómo elijo el tratamiento adecuado?<span class="faq-plus" aria-hidden="true"></span></summary><p>Cuéntanos qué te gustaría conseguir y te orientaremos sobre el servicio más adecuado para ti y tu cabello.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-wrap reveal">
+      <span class="cta-flower" aria-hidden="true">✳</span><p class="eyebrow"><span class="eyebrow-line"></span> Tu próximo capítulo</p><h2>Regálate un<br><em>momento SHINORA.</em></h2><a class="button button-dark" href="#reservar">Reserva tu cita <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="visitor-section" id="registro" aria-labelledby="visitor-title">
+      <div class="visitor-inner section-wrap">
+        <div class="visitor-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Qué gusto tenerte aquí</p>
+          <h2 id="visitor-title">Nos encanta<br><em>verte volver.</em></h2>
+          <p>Déjanos tu nombre y te saludaremos cuando vuelvas desde este mismo dispositivo.</p>
+          <p class="privacy-note" id="visitor-privacy">Tu nombre se guarda solo en este navegador. No se envía a SHINORA ni a terceros.</p>
+        </div>
+        <div class="visitor-form-area">
+          <form class="visitor-form" id="visitor-form">
+            <div class="visitor-fields">
+              <div class="form-field">
+                <label for="visitor-name">Nombre</label>
+                <input id="visitor-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+              </div>
+            </div>
+            <label class="visitor-consent" for="visitor-consent">
+              <input id="visitor-consent" name="consent" type="checkbox" required>
+              <span>Acepto guardar mi nombre solo en este dispositivo para personalizar mi próxima visita. No se enviará ni se usará para comunicaciones.</span>
+            </label>
+            <button class="button button-dark visitor-submit" type="submit">Guardar mis datos <span aria-hidden="true">↗</span></button>
+            <p class="visitor-status" id="visitor-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="visitor-saved" id="visitor-saved" hidden>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Ya estás en casa</p>
+            <h3 id="visitor-greeting" tabindex="-1"></h3>
+            <p>Te reconoceremos la próxima vez que visites este sitio desde este dispositivo.</p>
+            <button class="forget-button" id="forget-visitor" type="button">Borrar mis datos guardados</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand brand-footer" href="#inicio"><span class="brand-symbol" aria-hidden="true">S</span><span class="brand-name">SHINORA</span></a><p>Belleza, a tu manera.</p><a class="back-top" href="#inicio">Volver arriba ↑</a><span class="footer-note">© <span id="year"></span> SHINORA</span></footer>
+</body>
+</html>
