@@ -32,6 +32,6 @@ La sección **Reserva tu cita** solicita nombre, servicio, fecha y hora preferid
 
 ## Accesibilidad, buenas prácticas y SEO
 
-La página incluye idioma español, título y descripción, estructura semántica, enlace para saltar al contenido, etiquetas de formulario, validación del navegador, estados anunciados para tecnologías de asistencia, foco visible y soporte para movimiento reducido. Los tonos de texto secundario están ajustados para superar 4.5:1 de contraste en los fondos claros principales.
+La página incluye idioma español, título y descripción, estructura semántica, enlace para saltar al contenido, etiquetas de formulario, validación del navegador, estados anunciados para tecnologías de asistencia, foco visible y soporte para movimiento reducido. Los textos pequeños tienen al menos 12 px y los pares de texto/fondo de contenido se ajustan para superar 4.5:1; las leyendas sobre imágenes tienen una base oscura opaca.
 
 El objetivo es mantener al menos 95 en Accessibility, Best Practices y SEO. **Es un objetivo, no una puntuación certificada**: Lighthouse no está instalado en el entorno de desarrollo y no se ha medido una auditoría numérica. Para comprobarlo, sirve el sitio en `localhost` o HTTPS, abre Chrome DevTools → Lighthouse, selecciona esas tres categorías y ejecuta la auditoría en escritorio y móvil. Corrige los hallazgos que informe Lighthouse antes de publicar; la puntuación puede variar según el navegador, red y entorno.
