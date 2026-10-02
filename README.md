@@ -30,6 +30,23 @@ El formulario solicita únicamente el nombre y consentimiento expreso. Lo guarda
 
 La sección **Reserva tu cita** solicita nombre, servicio, fecha y hora preferidas; el detalle es opcional. Al continuar, abre WhatsApp con la solicitud prellenada para el número `+58 424 000 0000` (el número local `04240000000` convertido al formato internacional requerido por `wa.me`). El visitante debe enviar el mensaje en WhatsApp y SHINORA debe confirmar disponibilidad: la página no crea ni confirma citas automáticamente.
 
+## Ajuste de tipografía
+
+Se mejoró la legibilidad de la landing page para que la fuente principal se vea más elegante, clara y llamativa sin perder la sensación premium del brand SHINORA.
+
+### Cambios aplicados
+
+- Se reemplazó la tipografía serif demasiado fina por una alternativa más refinada y legible: `Cormorant Garamond`.
+- Se ajustó el peso, tamaño y altura de línea de los títulos para que no se vean demasiado delgados ni difíciles de leer.
+- Se mantiene una combinación con `DM Sans` para el cuerpo y la navegación, creando un equilibrio entre sofisticación y claridad.
+- Se activó el suavizado anti-aliasing para mejorar la experiencia visual en navegadores modernos.
+
+### Resultado esperado
+
+- Encabezados más impactantes y visualmente premium.
+- Mejor legibilidad en desktop y móvil.
+- Una estética más elegante y coherente con la marca de belleza y bienestar.
+
 ## Accesibilidad, buenas prácticas y SEO
 
 La página incluye idioma español, título y descripción, estructura semántica, enlace para saltar al contenido, etiquetas de formulario, validación del navegador, estados anunciados para tecnologías de asistencia, foco visible y soporte para movimiento reducido. Los textos pequeños tienen al menos 12 px y los pares de texto/fondo de contenido se ajustan para superar 4.5:1; las leyendas sobre imágenes tienen una base oscura opaca.

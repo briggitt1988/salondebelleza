@@ -9,13 +9,13 @@
   --coral: #a84430;
   --muted: #626c64;
   --line: #dce2d9;
-  --display: "Bodoni Moda", "Times New Roman", serif;
+  --display: "Cormorant Garamond", Georgia, serif;
   --body: "DM Sans", "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.65; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.65; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -44,10 +44,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; color: var(--forest); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
 .eyebrow-line { width: 26px; height: 1px; display: inline-block; background: var(--coral); }
 h1, h2, h3, p { margin-top: 0; }
-h1, h2 { margin-bottom: 0; font-weight: 400; }
-h1 { max-width: 570px; font-family: var(--display); font-size: 72px; line-height: 1.02; }
-h1 em, h2 em { color: var(--forest); font-weight: 400; }
-.hero-intro { max-width: 400px; margin: 25px 0 25px; color: #5e6961; font-size: 15px; }
+h1, h2 { margin-bottom: 0; font-weight: 600; }
+h1 { max-width: 570px; font-family: var(--display); font-size: clamp(4.2rem, 5vw, 7rem); line-height: 0.86; letter-spacing: -0.04em; }
+h1 em, h2 em { color: var(--forest); font-weight: 600; font-style: italic; }
+.hero-intro { max-width: 430px; margin: 25px 0 25px; color: #5e6961; font-size: 15px; line-height: 1.6; }
 .hero-actions { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
 .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 0 19px; font-size: 13px; font-weight: 600; transition: transform .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-2px); }
@@ -184,7 +184,7 @@ h1 em, h2 em { color: var(--forest); font-weight: 400; }
   .site-header { min-height: 74px; padding-inline: 6.5%; }
   .site-nav { gap: 22px; }
   .hero { min-height: 540px; grid-template-columns: .94fr 1.06fr; gap: 5%; }
-  h1 { font-size: 60px; }
+  h1 { font-size: clamp(3.8rem, 5vw, 5.8rem); }
   .hero-visual { height: 405px; }
   .hero-note { margin-top: 33px; }
   .service-image { height: 230px; }
