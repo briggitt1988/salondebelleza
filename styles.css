@@ -58,6 +58,7 @@ h1 em, h2 em { color: var(--forest); font-weight: 700; font-style: italic; }
 .button-dark:hover { background: var(--forest-deep); }
 .text-link { padding: 8px 0; border-bottom: 1px solid var(--coral); font-size: 13px; font-weight: 600; }
 .text-link span { margin-left: 8px; color: var(--forest); }
+.hero-secondary-actions { display: flex; align-items: center; gap: 25px; }
 .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 46px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .note-star { color: var(--coral); font-size: 25px; }
 .hero-visual { position: relative; height: 472px; margin: 0; background: #d8ded5; }
@@ -221,6 +222,7 @@ h1 em, h2 em { color: var(--forest); font-weight: 700; font-style: italic; }
   h1 { font-size: 56px; }
   .hero-intro { max-width: 440px; margin: 17px 0 19px; font-size: 13px; }
   .hero-actions { gap: 18px; }
+  .hero-secondary-actions { gap: 18px; }
   .button { min-height: 45px; gap: 14px; padding-inline: 14px; font-size: 12px; }
   .hero-note { display: none; }
   .hero-visual { height: 290px; margin-right: 12px; }
@@ -279,6 +281,8 @@ h1 em, h2 em { color: var(--forest); font-weight: 700; font-style: italic; }
 @media (max-width: 380px) {
   h1 { font-size: 48px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .hero-secondary-actions { gap: 12px; }
+  .hero-secondary-actions .text-link { font-size: 12px; }
   .service-image { height: 250px; }
   .gallery-grid { grid-template-rows: 220px 160px 170px; }
 }
