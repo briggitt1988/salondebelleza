@@ -30,12 +30,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--forest); }
 .brand-symbol { width: 31px; height: 31px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-family: var(--display); font-size: 22px; line-height: 1; }
 .brand-name { font-size: 13px; font-weight: 700; letter-spacing: 2.1px; }
-.weather-widget { display: inline-flex; align-items: center; gap: 2px; color: var(--forest); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.weather-widget { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(23, 59, 48, 0.04); color: var(--forest); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .weather-widget[hidden] { display: none; }
-.weather-icon { width: 34px; height: 34px; object-fit: contain; }
+.weather-icon { width: 28px; height: 28px; object-fit: contain; }
 .site-nav { display: flex; align-items: center; gap: 35px; font-size: 14px; font-weight: 500; }
 .site-nav > a:not(.nav-cta) { transition: color .2s ease; }
 .site-nav > a:not(.nav-cta):hover { color: #66851c; }
+.weather-widget { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(23, 59, 48, 0.04); color: var(--forest); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.weather-widget[hidden] { display: none; }
+.weather-icon { width: 28px; height: 28px; object-fit: contain; }
 .nav-cta { display: inline-flex; align-items: center; gap: 16px; padding: 11px 15px; background: var(--lime); transition: background .2s ease, transform .2s ease; }
 .nav-cta:hover { transform: translateY(-2px); background: #c8ed5d; }
 .nav-cta span { font-size: 16px; }

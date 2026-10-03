@@ -129,10 +129,9 @@ const weatherIcon = document.querySelector("#weather-icon");
 const weatherTemperature = document.querySelector("#weather-temperature");
 
 function showLocalWeather(position) {
-  if (!weatherApiKey) return;
+  if (!weatherApiKey || !weatherWidget || !weatherIcon || !weatherTemperature) return;
 
   const { latitude, longitude } = position.coords;
-  console.info("SHINORA: consultando OpenWeatherMap con la ubicación actual.");
   const query = new URLSearchParams({
     lat: latitude,
     lon: longitude,
@@ -150,18 +149,22 @@ function showLocalWeather(position) {
       const temperature = Math.round(weather.main.temp);
       const description = weather.weather[0].description;
       weatherIcon.src = `https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`;
+      weatherIcon.alt = "Icono del clima";
       weatherTemperature.textContent = `${temperature}°`;
       weatherWidget.setAttribute("aria-label", `${temperature} grados, ${description}`);
       weatherWidget.hidden = false;
     })
-    .catch((error) => console.error("SHINORA: error al consultar OpenWeatherMap.", error));
+    .catch((error) => {
+      console.error("SHINORA: error al consultar OpenWeatherMap.", error);
+      weatherWidget.hidden = true;
+    });
 }
 
 if (weatherApiKey && "geolocation" in navigator) {
-  console.info("SHINORA: solicitando permiso de geolocalización para mostrar el clima.");
   navigator.geolocation.getCurrentPosition(showLocalWeather, (error) => {
-    if (error.code !== error.PERMISSION_DENIED) {
-      console.info("SHINORA: ubicación no disponible para mostrar el clima.");
-    }
+    console.info("SHINORA: geolocalización no disponible o denegada.", error.code);
+    weatherWidget.hidden = true;
   }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 10000 });
+} else {
+  weatherWidget.hidden = true;
 }
