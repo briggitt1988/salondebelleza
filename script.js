@@ -132,6 +132,7 @@ function showLocalWeather(position) {
   if (!weatherApiKey) return;
 
   const { latitude, longitude } = position.coords;
+  console.info("SHINORA: consultando OpenWeatherMap con la ubicación actual.");
   const query = new URLSearchParams({
     lat: latitude,
     lon: longitude,
@@ -157,6 +158,7 @@ function showLocalWeather(position) {
 }
 
 if (weatherApiKey && "geolocation" in navigator) {
+  console.info("SHINORA: solicitando permiso de geolocalización para mostrar el clima.");
   navigator.geolocation.getCurrentPosition(showLocalWeather, (error) => {
     if (error.code !== error.PERMISSION_DENIED) {
       console.info("SHINORA: ubicación no disponible para mostrar el clima.");

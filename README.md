@@ -32,20 +32,35 @@ La sección **Reserva tu cita** solicita nombre, servicio, fecha y hora preferid
 
 ## Ajuste de tipografía
 
-Se mejoró la legibilidad de la landing page para que la fuente principal se vea más elegante, clara y llamativa sin perder la sensación premium del brand SHINORA.
+Se corrigió la legibilidad de la landing page para evitar fuentes demasiado finas o poco claras. La tipografía se reforzó para mantener un aspecto elegante y premium sin perder claridad.
 
 ### Cambios aplicados
 
-- Se reemplazó la tipografía serif demasiado fina por una alternativa más refinada y legible: `Cormorant Garamond`.
-- Se ajustó el peso, tamaño y altura de línea de los títulos para que no se vean demasiado delgados ni difíciles de leer.
-- Se mantiene una combinación con `DM Sans` para el cuerpo y la navegación, creando un equilibrio entre sofisticación y claridad.
+- Se reemplazó la fuente principal por una alternativa más robusta y legible: `Roboto` de Google Fonts.
+- Se aumentó el peso visual en los títulos y mensajes de bienvenida para evitar texturas demasiado delgadas.
+- Se ajustó el interlineado y la altura de línea para mejorar la lectura en desktop y móvil.
+- Se mantuvo una combinación con `DM Sans` para el cuerpo y la navegación, equilibrando elegancia y claridad.
 - Se activó el suavizado anti-aliasing para mejorar la experiencia visual en navegadores modernos.
 
 ### Resultado esperado
 
-- Encabezados más impactantes y visualmente premium.
-- Mejor legibilidad en desktop y móvil.
-- Una estética más elegante y coherente con la marca de belleza y bienestar.
+- Encabezados y saludos más cómodos de leer.
+- Mejor legibilidad del texto principal y de mensajes tipo “ya estás en casa”.
+- Estética premium con una lectura más nítida y menos forzada.
+
+## Correcciones adicionales aplicadas
+
+### Clima y geolocalización
+
+Se reinstaló la carga de `weather-config.js` para que la clave de OpenWeatherMap se registre correctamente en la página. La lógica del clima solicita permiso de geolocalización si la clave existe y el navegador lo permite. Para que esto funcione, la página debe abrirse desde `localhost` o HTTPS.
+
+### Favicon y validación HTML
+
+Se sustituyó el favicon inline problemático por un archivo real `favicon.svg` para evitar errores de validación por `href` inválido. Esto elimina la advertencia de HTML sobre caracteres no válidos en la URL del icono.
+
+### Enlace del logo al inicio
+
+Se ajustó el comportamiento del logo y el botón “Volver arriba” para que lleven al inicio de la página sin ocultar el anuncio superior. Se añadió un punto de ancla real y un desplazamiento compensado para respetar la cabecera.
 
 ## Accesibilidad, buenas prácticas y SEO
 
