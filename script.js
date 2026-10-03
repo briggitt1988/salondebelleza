@@ -127,6 +127,17 @@ const weatherApiKey = window.SHINORA_WEATHER_API_KEY;
 const weatherWidget = document.querySelector("#weather-widget");
 const weatherIcon = document.querySelector("#weather-icon");
 const weatherTemperature = document.querySelector("#weather-temperature");
+const defaultWeather = { temperature: 24, icon: "01d" };
+
+function showDefaultWeather() {
+  if (!weatherWidget || !weatherIcon || !weatherTemperature) return;
+
+  weatherIcon.src = `https://openweathermap.org/img/wn/${defaultWeather.icon}.png`;
+  weatherIcon.alt = "Ícono de clima predeterminado";
+  weatherTemperature.textContent = `${defaultWeather.temperature}°`;
+  weatherWidget.setAttribute("aria-label", `Temperatura predeterminada: ${defaultWeather.temperature} grados Celsius`);
+  weatherWidget.hidden = false;
+}
 
 function showLocalWeather(position) {
   if (!weatherApiKey || !weatherWidget || !weatherIcon || !weatherTemperature) return;
@@ -156,15 +167,15 @@ function showLocalWeather(position) {
     })
     .catch((error) => {
       console.error("SHINORA: error al consultar OpenWeatherMap.", error);
-      weatherWidget.hidden = true;
+      showDefaultWeather();
     });
 }
+
+showDefaultWeather();
 
 if (weatherApiKey && "geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(showLocalWeather, (error) => {
     console.info("SHINORA: geolocalización no disponible o denegada.", error.code);
-    weatherWidget.hidden = true;
+    showDefaultWeather();
   }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 10000 });
-} else {
-  weatherWidget.hidden = true;
 }

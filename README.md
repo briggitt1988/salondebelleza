@@ -12,13 +12,14 @@ Landing page estática y responsive para el salón de belleza SHINORA.
 
 ## Abrir el sitio
 
-Abre `index.html` en un navegador. Para que la geolocalización funcione, sirve la página desde `localhost` o mediante HTTPS. El navegador solicitará permiso para acceder a la ubicación; si se deniega, el clima no se muestra.
+Abre `index.html` en un navegador. Para que la geolocalización funcione, sirve la página desde `localhost` o mediante HTTPS. El navegador solicitará permiso para acceder a la ubicación; si se deniega o falla la consulta del clima, el header conserva una temperatura predeterminada de 24°.
 
 ## API: geolocalización y clima
 
 - El sitio usa la API de geolocalización del navegador para detectar la ubicación actual del visitante.
 - Con esa ubicación, consulta la API de OpenWeatherMap para obtener la temperatura actual y el ícono asociado.
 - En el header solo se muestra la temperatura y el ícono del clima; no se muestra descripción textual ni otra información meteorológica.
+- Mientras se obtiene la ubicación y como respaldo si no está disponible, se muestra 24° con un ícono predeterminado. Ese valor es referencial, no una lectura meteorológica actual.
 - La clave de OpenWeatherMap se configura en `weather-config.js`, archivo que puede mantenerse local y no compartirse en Git.
 - Para que la solicitud funcione correctamente, la página debe servirse desde `localhost` o mediante HTTPS.
 
