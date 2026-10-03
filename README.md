@@ -14,13 +14,22 @@ Landing page estática y responsive para el salón de belleza SHINORA.
 
 Abre `index.html` en un navegador. Para que la geolocalización funcione, sirve la página desde `localhost` o mediante HTTPS. El navegador solicitará permiso para acceder a la ubicación; si se deniega, el clima no se muestra.
 
-## Clima local
+## API: geolocalización y clima
 
-La página usa la API de geolocalización del navegador y consulta la temperatura actual en OpenWeatherMap. En el encabezado solo se muestra la temperatura y su icono.
+- El sitio usa la API de geolocalización del navegador para detectar la ubicación actual del visitante.
+- Con esa ubicación, consulta la API de OpenWeatherMap para obtener la temperatura actual y el ícono asociado.
+- En el header solo se muestra la temperatura y el ícono del clima; no se muestra descripción textual ni otra información meteorológica.
+- La clave de OpenWeatherMap se configura en `weather-config.js`, archivo que puede mantenerse local y no compartirse en Git.
+- Para que la solicitud funcione correctamente, la página debe servirse desde `localhost` o mediante HTTPS.
 
-La clave se configura en `weather-config.js`, archivo excluido de Git. Para preparar una copia local, duplica `weather-config.example.js` como `weather-config.js` y agrega una clave válida de OpenWeatherMap.
+### Ejemplo de uso
 
-Como el sitio es estático, una clave incluida en JavaScript se puede inspeccionar desde el navegador. Para producción, consulta OpenWeatherMap desde un servidor intermediario y restringe o rota la clave.
+1. El navegador solicita permiso para acceder a la ubicación.
+2. Si se acepta, se obtiene latitud y longitud.
+3. Se consulta OpenWeatherMap con esos datos.
+4. Se renderiza solo la temperatura actual y el icono climático en el encabezado.
+
+Como el sitio es estático, la clave queda visible en el cliente; para producción se recomienda usar un backend intermedio para protegerla.
 
 ## Registro local
 
