@@ -30,15 +30,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--forest); }
 .brand-symbol { width: 31px; height: 31px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-family: var(--display); font-size: 22px; line-height: 1; }
 .brand-name { font-size: 13px; font-weight: 700; letter-spacing: 2.1px; }
-.weather-widget { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(23, 59, 48, 0.04); color: var(--forest); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.weather-widget[hidden] { display: none; }
-.weather-icon { width: 28px; height: 28px; object-fit: contain; }
 .site-nav { display: flex; align-items: center; gap: 35px; font-size: 14px; font-weight: 500; }
 .site-nav > a:not(.nav-cta) { transition: color .2s ease; }
 .site-nav > a:not(.nav-cta):hover { color: #66851c; }
-.weather-widget { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(23, 59, 48, 0.04); color: var(--forest); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.weather-widget { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px 6px 7px; border-radius: 999px; background: rgba(23, 59, 48, 0.04); color: var(--forest); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .weather-widget[hidden] { display: none; }
-.weather-icon { width: 28px; height: 28px; object-fit: contain; }
+.weather-icon { width: 34px; height: 34px; object-fit: contain; }
 .nav-cta { display: inline-flex; align-items: center; gap: 16px; padding: 11px 15px; background: var(--lime); transition: background .2s ease, transform .2s ease; }
 .nav-cta:hover { transform: translateY(-2px); background: #c8ed5d; }
 .nav-cta span { font-size: 16px; }
@@ -207,8 +204,8 @@ h1 em, h2 em { color: var(--forest); font-weight: 700; font-style: italic; }
   .site-header { min-height: 67px; padding-inline: 6%; }
   .brand-symbol { width: 28px; height: 28px; font-size: 20px; }
   .brand-name { font-size: 12px; letter-spacing: 1.8px; }
-  .weather-widget { margin-left: auto; margin-right: 15px; font-size: 12px; }
-  .weather-icon { width: 31px; height: 31px; }
+  .weather-widget { margin-left: auto; margin-right: 15px; padding-block: 2px; font-size: 12px; }
+  .weather-icon { width: 60px; height: 60px; }
   .menu-toggle { width: 42px; height: 42px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; border: 1px solid var(--line); background: transparent; cursor: pointer; }
   .menu-toggle span { width: 17px; height: 1px; background: var(--forest); transition: transform .2s ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }

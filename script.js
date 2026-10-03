@@ -127,12 +127,12 @@ const weatherApiKey = window.SHINORA_WEATHER_API_KEY;
 const weatherWidget = document.querySelector("#weather-widget");
 const weatherIcon = document.querySelector("#weather-icon");
 const weatherTemperature = document.querySelector("#weather-temperature");
-const defaultWeather = { temperature: 24, icon: "01d" };
+const defaultWeather = { temperature: 24, icon: "02d" };
 
 function showDefaultWeather() {
   if (!weatherWidget || !weatherIcon || !weatherTemperature) return;
 
-  weatherIcon.src = `https://openweathermap.org/img/wn/${defaultWeather.icon}.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${defaultWeather.icon}@2x.png`;
   weatherIcon.alt = "Ícono de clima predeterminado";
   weatherTemperature.textContent = `${defaultWeather.temperature}°`;
   weatherWidget.setAttribute("aria-label", `Temperatura predeterminada: ${defaultWeather.temperature} grados Celsius`);
@@ -159,7 +159,7 @@ function showLocalWeather(position) {
     .then((weather) => {
       const temperature = Math.round(weather.main.temp);
       const description = weather.weather[0].description;
-      weatherIcon.src = `https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`;
+      weatherIcon.src = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
       weatherIcon.alt = "Icono del clima";
       weatherTemperature.textContent = `${temperature}°`;
       weatherWidget.setAttribute("aria-label", `${temperature} grados, ${description}`);
